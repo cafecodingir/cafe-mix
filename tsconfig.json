@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "outDir": "dist",
+    "strict": true,
+    "lib": ["esnext"],
+    "esModuleInterop": true
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "app/http/controllers/controller.ts", "app/http/controllers/HomeController.ts", "routes/web/home.ts", "routes/web/index.ts", "app/index.ts", "server.ts"],
+  "exclude": ["node_modules"]
+}
