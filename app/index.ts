@@ -14,7 +14,7 @@ import validator from 'express-validator'
 import { body, validationResult } from 'express-validator'
 
 const app = express()
-const PORT = 3000
+const PORT = process.env.PORT || 3000
 
 export default class Application {
   constructor() {
@@ -25,7 +25,7 @@ export default class Application {
 
   setupExpress() {
     const server = http.createServer(app)
-    server.listen(PORT, () => console.log(`Server Is Running On Port ${PORT}`))
+    server.listen(PORT, () => console.log(`Server Is Running On http://localhost:${PORT}`))
   }
 
   setConfig() {
