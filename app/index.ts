@@ -1,17 +1,12 @@
 import express from 'express'
-import { Request, Response } from 'express'
 import http from 'http'
 import path from 'path'
 import cookieParser from 'cookie-parser'
 import session from 'express-session'
-import flash from 'connect-flash'
 import { PrismaSessionStore } from '@quixo3/prisma-session-store'
 import { PrismaClient } from '@prisma/client'
 import webRoutes from '../routes/web'
 import apiRoutes from '../routes/api'
-import passport from 'passport'
-import validator from 'express-validator'
-import { body, validationResult } from 'express-validator'
 
 const app = express()
 const PORT = process.env.PORT || 3000
@@ -51,7 +46,6 @@ export default class Application {
       }),
     )
     app.use(cookieParser(process.env.SECRET_KEY))
-    app.use(flash())
   }
 
   setRouter() {

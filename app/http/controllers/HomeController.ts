@@ -1,7 +1,6 @@
 import { Request, Response } from 'express'
-import controller from './controller'
 
-class homeController extends controller {
+class homeController {
   404(req: Request, res: Response) {
     res.render('404')
   }
